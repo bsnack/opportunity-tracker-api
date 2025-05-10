@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles on top of Tailwind */
+@layer components {
+  /* Button styles */
+  .btn {
+    @apply px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-300;
+  }
+  
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-500;
+  }
+  
+  /* Form control styles */
+  .form-control {
+    @apply w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+  
+  /* Badge styles */
+  .badge {
+    @apply px-2 py-1 text-xs rounded-full;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow overflow-hidden;
+  }
+  
+  .card-header {
+    @apply px-4 py-3 bg-gray-50 border-b font-medium;
+  }
+  
+  .card-body {
+    @apply p-4;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-gray-900;
+  }
+  
+  h1 {
+    @apply text-3xl;
+  }
+  
+  h2 {
+    @apply text-2xl;
+  }
+  
+  h3 {
+    @apply text-xl;
+  }
+  
+  /* Links */
+  a {
+    @apply text-blue-600 hover:underline;
+  }
+}
+
+/* Grade colors */
+.grade-9 {
+  @apply bg-green-100 text-green-800;
+}
+
+.grade-10 {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.grade-11 {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.grade-12 {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Animation for upcoming items */
+@keyframes pulse-light {
+  0%, 100% {
+    background-color: rgba(254, 252, 232, 0.8); /* yellow-50 with opacity */
+  }
+  50% {
+    background-color: rgba(254, 252, 232, 0.4); /* yellow-50 with less opacity */
+  }
+}
+
+.pulse-upcoming {
+  animation: pulse-light 2s ease-in-out infinite;
+}
+
+/* Calendar date display */
+.calendar-date {
+  @apply flex items-center justify-center w-8 h-8 rounded-full;
+}
+
+.calendar-date.has-items {
+  @apply bg-blue-100 text-blue-800 font-medium;
+}
+
+.calendar-date.today {
+  @apply ring-2 ring-blue-500;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+/* Custom scrollbar */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded hover:bg-gray-400;
+  }
+}

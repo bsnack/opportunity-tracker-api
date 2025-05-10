@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Opportunity Tracker - Manage your academic opportunities, internships, scholarships, and competitions"
+    />
+    <meta name="keywords" content="opportunity, internship, scholarship, competition, academic, tracker, students" />
+    <meta name="author" content="Opportunity Tracker" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (if not using the npm package) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              blue: {
+                50: '#EFF6FF',
+                100: '#DBEAFE',
+                200: '#BFDBFE',
+                300: '#93C5FD',
+                400: '#60A5FA',
+                500: '#3B82F6',
+                600: '#2563EB',
+                700: '#1D4ED8',
+                800: '#1E40AF',
+                900: '#1E3A8A',
+              },
+            },
+          },
+        },
+      }
+    </script>
+    
+    <title>Opportunity Tracker</title>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This is where the React app gets mounted.
+      The entire application is rendered within this div.
+      
+      If you're seeing this comment in your browser, something might be wrong with your React setup.
+      Check your JavaScript console for errors.
+    -->
+  </body>
+</html>
